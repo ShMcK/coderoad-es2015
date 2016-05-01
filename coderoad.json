@@ -1,0 +1,77 @@
+{
+  "info": {
+    "title": "ES2015",
+    "description": "Practice refactoring with ES2015 features."
+  },
+  "chapters": [
+    {
+      "title": "Declaring Variables",
+      "description": "Using `let` & `const`.",
+      "pages": [
+        {
+          "title": "Let",
+          "description": "`let` allows you to declare variables that are limited in scope to the block, statement, or expression on which it is used.\n\nThis is unlike the `var` keyword, which defines a variable globally, or locally to an entire function regardless of block scope.\n\n```js\nvar global = true;\nlet blockScoped = true;\n```",
+          "tasks": [
+            {
+              "description": "Run the `varTest` function and look in the console.",
+              "tests": [
+                "1/01/01"
+              ],
+              "hints": [
+                "Click \"SAVE\". ⌘ + S on Mac, ctrl + S on Windows"
+              ],
+              "actions": [
+                "open('let.js')",
+                "set('// call `varTest()`\nfunction varTest() {\n\tvar x = 1;\n\tif (true) {\n\t\tvar x = 2;\n\t\tconsole.log(x);\n\t}\n\tconsole.log(x);\n}\nvarTest();\n\n')"
+              ]
+            },
+            {
+              "description": "Change `var` to `let` and run the `letTest` function. Don't forget to look in the console.",
+              "tests": [
+                "1/01/02"
+              ],
+              "actions": [
+                "insert('\n// use `let` and call `letTest()`\nfunction letTest() {\n\tvar x = 3;\n\tif (true) {\n\t\tvar x = 4;\n\t\tconsole.log(x);\n\t}\n\tconsole.log(x);\n}\nletTest();\n\n')"
+              ]
+            },
+            {
+              "description": "fix the for loop to log numbers from 1 to 5",
+              "tests": [
+                "1/01/03"
+              ],
+              "actions": [
+                "insert('\n// log numbers from 1 to 5\nfor (var i = 1; i <= 5 ; i++ ) {\n  setTimeout(function() {\n    console.log(i);\n  })\n}\n// 6 6 6 6 6\n\n')"
+              ]
+            }
+          ],
+          "onPageComplete": "Great! Now you that you have an idea of how `let` works, continue to look at declaring variables with `const`."
+        },
+        {
+          "title": "Const",
+          "description": "Writing basic functions continued.\n\nWe'll write two more basic functions, this time without any help.",
+          "tasks": [
+            {
+              "description": "write a function `divideOne` divides a number by 1",
+              "tests": [
+                "1/02/01"
+              ],
+              "actions": [
+                "open('page-02.js')",
+                "set('// divideOne\nfunction divideOne(x) {\n  return ::>\n}\n')"
+              ]
+            },
+            {
+              "description": "write a function `mutiplyone` that multiplies a number by 1",
+              "tests": [
+                "1/02/02"
+              ],
+              "actions": [
+                "insert('\n// multiplyOne\nfunction multiplyOne(x) {\n  return ::>\n}\n')"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

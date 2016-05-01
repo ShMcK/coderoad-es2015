@@ -1,0 +1,30 @@
+{
+  "name": "coderoad-es2015",
+  "version": "0.1.0",
+  "description": "Coderoad tutorial",
+  "author": "Name <email> (site)",
+  "contributors": [],
+  "main": "coderoad.json",
+  "files": [
+    "coderoad.json",
+    "tutorial"
+  ],
+  "keywords": [
+    "coderoad",
+    "tutorial"
+  ],
+  "engines": {
+    "node": ">=0.10.3"
+  },
+  "dependencies": {
+    "mocha-coderoad": "^0.6.0",
+    "chai-spies": "0.7.1",
+    "chai": "3.5.0"
+  },
+  "license": "MIT",
+  "config": {
+    "dir": "tutorial",
+    "runner": "mocha-coderoad",
+    "testSuffix": ".spec.js"
+  }
+}
