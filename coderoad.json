@@ -5,8 +5,8 @@
   },
   "chapters": [
     {
-      "title": "Declaring Variables",
-      "description": "Using `let` & `const`.",
+      "title": "Features",
+      "description": "New features in ES2015.",
       "pages": [
         {
           "title": "Let",

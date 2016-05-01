@@ -19,9 +19,9 @@ CodeRoad is an open-sourced interactive tutorial platform for the Atom Editor. L
 
 ## Outline
 
-### Declaring Variables
+### Features
 
-Using `let` & `const`.
+New features in ES2015.
 
 ##### Let
 

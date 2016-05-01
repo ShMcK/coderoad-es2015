@@ -8,6 +8,10 @@ describe('03 expression', () => {
 		expect(expression.toString()).to.match(/`/g);
 	});
 
+	it('should use expressions `{exp}`', () => {
+		expect(expression.toString()).to.match(/${name}/g);
+	});
+
 	it('shouldn\'t have regular quotes, only backticks (`)', () => {
 		expect(expression.toString()).not.to.match(/['"]/g);
 	});
