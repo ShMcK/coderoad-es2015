@@ -6,3 +6,5 @@ Using `let` & `const`.
 
 @import('tutorial/1/01/let')
 @import('tutorial/1/02/const')
+@import('tutorial/1/03/arrow-function')
+@import('tutorial/1/04/template-literal')

@@ -1,24 +1,15 @@
-var expect = require('chai').expect;
+'use strict';
+var chai = require('chai');
+var spies = require('chai-spies');
+var expect = chai.expect;
+chai.use(spies);
+var spy = chai.spy.on(console, 'log');
 
-// load('page-02.js')
+/// load('const.js')
 
-describe('01 divideOne', function() {
-
-	it('doesn\'t exist', function() {
-		expect(divideOne).to.be.defined;
-	});
-
-	it('should take a parameter', function() {
-		expect(divideOne).to.have.length(1);
-	});
-
-	it('doesn\'t output a number', function() {
-		expect(divideOne(1)).to.be.a('number');
-	});
-
-	it('returns the same number', function() {
-		expect(divideOne(1)).to.equal(1);
-		expect(divideOne(10)).to.equal(10);
-	});
-
+describe('01 password', () => {
+	// cannot redeclare
+	it('should pass', () => {
+		expect(true).to.be.true;
+	})
 });

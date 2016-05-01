@@ -27,6 +27,7 @@ function varTest() {
 }
 varTest();
 
+
 ```  
 ))
 
@@ -46,10 +47,11 @@ function letTest() {
 }
 letTest();
 
+
 ```  
 ))
 
-+ fix the for loop to log numbers from 1 to 5
++ fix the broken loop to log numbers 1 to 5
 @test('1/01/03')
 @action(insert(
 ```

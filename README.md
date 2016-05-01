@@ -36,6 +36,44 @@ let blockScoped = true;
 
 ##### Const
 
-Writing basic functions continued.
+`const` is block-scoped, much like `let` statement.
 
-We'll write two more basic functions, this time without any help.
+However, the value of a constant cannot change through re-assignment, and it can't be redeclared.
+
+```js
+const name = 'Shawn';
+name = 'Ben'; // Uncaught TypeError
+console.log(name); // Shawn
+```
+
+*Note: Atom uses an older version of Chrome that does not fully implement const yet. Const will work in Atom after a few months.*
+
+##### Arrow Functions
+
+An arrow function (`=>`) expression has a shorter syntax compared to function expressions and lexically binds the `this` value.
+
+Arrow functions are always anonymous.
+
+```js
+// multi-line
+const add = (x, y) => {
+	return x + y;
+};
+// single line, auto returns
+const subtractOne = x => x - 1;
+const getOne = () => 1;
+```
+
+##### Template Literal
+
+Template literals are string literals allowing embedded expressions. You can use multi-line strings and string interpolation features with them.
+
+Template strings are wrapped in the backtick symbol: '\`'. Variables can be put inside of template strings using `${ name }` syntax.
+
+```js
+let single = `string text`;
+let multi = `string text line 1
+ string text line 2`;
+
+let template = `string text ${expression} string text`;
+```
