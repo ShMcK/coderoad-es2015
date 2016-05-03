@@ -3,155 +3,165 @@
     "title": "ES2015",
     "description": "Practice refactoring with ES2015 features."
   },
-  "chapters": [
+  "pages": [
     {
-      "title": "Features",
-      "description": "New features in ES2015.",
-      "pages": [
+      "title": "Let",
+      "description": "`let` allows you to declare variables that are limited in scope to the block, statement, or expression on which it is used.\n\nThis is unlike the `var` keyword, which defines a variable globally, or locally to an entire function regardless of block scope.\n\n```js\nvar global = true;\nlet blockScoped = true;\n```",
+      "tasks": [
         {
-          "title": "Let",
-          "description": "`let` allows you to declare variables that are limited in scope to the block, statement, or expression on which it is used.\n\nThis is unlike the `var` keyword, which defines a variable globally, or locally to an entire function regardless of block scope.\n\n```js\nvar global = true;\nlet blockScoped = true;\n```",
-          "tasks": [
-            {
-              "description": "Run the `varTest` function and look in the console.",
-              "tests": [
-                "1/01/01"
-              ],
-              "hints": [
-                "Click \"SAVE\". ⌘ + S on Mac, ctrl + S on Windows"
-              ],
-              "actions": [
-                "open('let.js')",
-                "set('// call `varTest()`\nfunction varTest() {\n\tvar x = 1;\n\tif (true) {\n\t\tvar x = 2;\n\t\tconsole.log(x);\n\t}\n\tconsole.log(x);\n}\nvarTest();\n\n\n')"
-              ]
-            },
-            {
-              "description": "Change `var` to `let` and run the `letTest` function. Don't forget to look in the console.",
-              "tests": [
-                "1/01/02"
-              ],
-              "actions": [
-                "insert('\n// use `let` and call `letTest()`\nfunction letTest() {\n\tvar x = 3;\n\tif (true) {\n\t\tvar x = 4;\n\t\tconsole.log(x);\n\t}\n\tconsole.log(x);\n}\nletTest();\n\n\n')"
-              ]
-            },
-            {
-              "description": "fix the broken loop to log numbers 1 to 5",
-              "tests": [
-                "1/01/03"
-              ],
-              "actions": [
-                "insert('\n// log numbers from 1 to 5\nfor (var i = 1; i <= 5 ; i++ ) {\n  setTimeout(function() {\n    console.log(i);\n  })\n}\n// 6 6 6 6 6\n\n')"
-              ]
-            }
+          "description": "Run the `varTest` function and look in the console.",
+          "tests": [
+            "1/01/01"
           ],
-          "onPageComplete": "Great! Now you that you have an idea of how `let` works, continue to look at declaring variables with `const`."
-        },
-        {
-          "title": "Const",
-          "description": "`const` is block-scoped, much like `let` statement.\n\nHowever, the value of a constant cannot change through re-assignment, and it can't be redeclared.\n\n```js\nconst name = 'Shawn';\nname = 'Ben'; // Uncaught TypeError\nconsole.log(name); // Shawn\n```\n\n*Note: Atom uses an older version of Chrome that does not fully implement const yet. Const will work in Atom after a few months.*",
-          "tasks": [
-            {
-              "description": "Declare \"person\" as a `const`",
-              "tests": [
-                "1/02/01"
-              ],
-              "actions": [
-                "open('const.js')",
-                "set('/*\nNote: Atom uses an older version of Chrome (47) that does not fully implement `const` yet.\n\n`const` will work in a later version of chrome, so these tests are currently skipped.\n*/\n\n// change password into a const so that it\n// cannot be redeclared\nvar password = 'PASS';\npassword = '1234';\n\n\n')"
-              ]
-            },
-            {
-              "description": "Declare \"person\" as a constant. Check the log to see what will happen.",
-              "tests": [
-                "1/02/02"
-              ],
-              "actions": [
-                "insert('\n// declare person as a const\n// cannot be redeclared\nvar person = {\n  name: 'Shawn',\n  city: 'Vancouver'\n};\n\nperson = {\n  name: 'Unknown',\n  city: 'Las Vegas'\n};\n\nperson.favoriteColor = 'blue';\n\n// what will the output be?\nconsole.log(person);\n\n\n')"
-              ]
-            },
-            {
-              "description": "Declare \"people\" as a constant. Check the log again.",
-              "tests": [
-                "1/02/03"
-              ],
-              "actions": [
-                "insert('\n// declare people as a const\n\nvar people = ['Mandi', 'Mack', 'Ben'];\n\npeople = [];\n\npeople.push('Shawn');\n\n// what will the output be?\nconsole.log(people);\n\n')"
-              ]
-            }
+          "hints": [
+            "Click \"SAVE\". ⌘ + S on Mac, ctrl + S on Windows"
+          ],
+          "actions": [
+            "open('let.js')",
+            "set('// call `varTest()`\nfunction varTest() {\n\tvar x = 1;\n\tif (true) {\n\t\tvar x = 2;\n\t\tconsole.log(x);\n\t}\n\tconsole.log(x);\n}\nvarTest();\n\n\n')"
           ]
         },
         {
-          "title": "Arrow Functions",
-          "description": "An arrow function (`=>`) expression has a shorter syntax compared to function expressions and lexically binds the `this` value.\n\nArrow functions are always anonymous.\n\n```js\n// multi-line\nconst add = (x, y) => {\n\treturn x + y;\n};\n// single line, auto returns\nconst subtractOne = x => x - 1;\nconst getOne = () => 1;\n```",
-          "tasks": [
-            {
-              "description": "Change the \"greet\" function to use an `=>` function",
-              "tests": [
-                "1/03/01"
-              ],
-              "actions": [
-                "open('arrow-function.js')",
-                "set('// use =>\nconst greet = function (name) {\n\treturn 'hello ' + name;\n}\n\n\n')"
-              ]
-            },
-            {
-              "description": "Change the \"getName\" function to use an `=>` function without using the keyword `return`",
-              "tests": [
-                "1/03/02"
-              ],
-              "actions": [
-                "insert('\n// use => no return statement\nconst getName = function getName() {\n\treturn 'Joe';\n}\n\n\n')"
-              ]
-            },
-            {
-              "description": "Fix the broken clock by using arrow functions.",
-              "tests": [
-                "1/03/03"
-              ],
-              "actions": [
-                "insert('\n// fix the clock\n// http://codepen.io/redacademy/pen/mPjXVW\n\n')"
-              ]
-            }
+          "description": "Change `var` to `let` and run the `letTest` function. Don't forget to look in the console.",
+          "tests": [
+            "1/01/02"
           ],
-          "onPageComplete": "Great! Now you should have a good idea how to use `=>` functions, and how arrow functions solve the confusion over `this`"
+          "actions": [
+            "insert('\n// use `let` and call `letTest()`\nfunction letTest() {\n\tvar x = 3;\n\tif (true) {\n\t\tvar x = 4;\n\t\tconsole.log(x);\n\t}\n\tconsole.log(x);\n}\nletTest();\n\n\n')"
+          ]
         },
         {
-          "title": "Template Literal",
-          "description": "Template literals are string literals allowing embedded expressions. You can use multi-line strings and string interpolation features with them.\n\nTemplate strings are wrapped in the backtick symbol: '\\`'. Variables can be put inside of template strings using `${ name }` syntax.\n\n```js\nlet single = `string text`;\nlet multi = `string text line 1\n string text line 2`;\n\nlet template = `string text ${expression} string text`;\n```",
-          "tasks": [
-            {
-              "description": "`log` a template literal using `template`. What does it look like?",
-              "actions": [
-                "open('template-literal.js')",
-                "set('// change the output to a template literal\n\nfunction template() {\n  console.log('I know what a backtick is');\n}\ntemplate();\n\n\n')"
-              ],
-              "tests": [
-                "1/04/01"
-              ]
-            },
-            {
-              "description": "rewrite `multiline` to use template literals",
-              "tests": [
-                "1/04/02"
-              ],
-              "actions": [
-                "insert('\nfunction multiline() {\n\tconsole.log('1.\\n2.\\n3.');\n}\nmultiline();\n// 1.\n// 2.\n// 3.\n\n\n')"
-              ]
-            },
-            {
-              "description": "rewrite `expressions` to use template literals",
-              "tests": [
-                "1/04/03"
-              ],
-              "hints": [
-                "Use `${expressions}`"
-              ],
-              "actions": [
-                "insert('\nfunction expression(name) {\n  console.log(\n    'Hello ' + name +\n    ', your bill is ' +\n    (2.25 * 1.15).toFixed(2) +\n    '.'\n  );\n}\nexpression('Joe');\n\n')"
-              ]
-            }
+          "description": "fix the broken loop to log numbers 1 to 5",
+          "tests": [
+            "1/01/03"
           ],
-          "onPageComplete": "Great! Now you should have a good idea how to use template literals in your code"
+          "actions": [
+            "insert('\n// log numbers from 1 to 5\nfor (var i = 1; i <= 5 ; i++ ) {\n  setTimeout(function() {\n    console.log(i);\n  })\n}\n// 6 6 6 6 6\n\n')"
+          ]
+        }
+      ],
+      "onPageComplete": "Great! Now you that you have an idea of how `let` works, continue to look at declaring variables with `const`."
+    },
+    {
+      "title": "Const",
+      "description": "`const` is block-scoped, much like `let` statement.\n\nHowever, the value of a constant cannot change through re-assignment, and it can't be redeclared.\n\n```js\nconst name = 'Shawn';\nname = 'Ben'; // Uncaught TypeError\nconsole.log(name); // Shawn\n```\n\n*Note: Atom uses an older version of Chrome that does not fully implement const yet. Const will work in Atom after a few months.*",
+      "tasks": [
+        {
+          "description": "Declare \"person\" as a `const`",
+          "tests": [
+            "1/02/01"
+          ],
+          "actions": [
+            "open('const.js')",
+            "set('/*\nNote: Atom uses an older version of Chrome (47) that does not fully implement `const` yet.\n\n`const` will work in a later version of chrome, so these tests are currently skipped.\n*/\n\n// change password into a const so that it\n// cannot be redeclared\nvar password = 'PASS';\npassword = '1234';\n\n\n')"
+          ]
+        },
+        {
+          "description": "Declare \"person\" as a constant. Check the log to see what will happen.",
+          "tests": [
+            "1/02/02"
+          ],
+          "actions": [
+            "insert('\n// declare person as a const\n// cannot be redeclared\nvar person = {\n  name: 'Shawn',\n  city: 'Vancouver'\n};\n\nperson = {\n  name: 'Unknown',\n  city: 'Las Vegas'\n};\n\nperson.favoriteColor = 'blue';\n\n// what will the output be?\nconsole.log(person);\n\n\n')"
+          ]
+        },
+        {
+          "description": "Declare \"people\" as a constant. Check the log again.",
+          "tests": [
+            "1/02/03"
+          ],
+          "actions": [
+            "insert('\n// declare people as a const\n\nvar people = ['Mandi', 'Mack', 'Ben'];\n\npeople = [];\n\npeople.push('Shawn');\n\n// what will the output be?\nconsole.log(people);\n\n')"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Arrow Functions",
+      "description": "An arrow function (`=>`) expression has a shorter syntax compared to function expressions and lexically binds the `this` value.\n\nArrow functions are always anonymous.\n\n```js\n// multi-line\nconst add = (x, y) => {\n\treturn x + y;\n};\n// single line, auto returns\nconst subtractOne = x => x - 1;\nconst getOne = () => 1;\n```",
+      "tasks": [
+        {
+          "description": "Change the \"greet\" function to use an `=>` function",
+          "tests": [
+            "1/03/01"
+          ],
+          "actions": [
+            "open('arrow-function.js')",
+            "set('// use =>\nconst greet = function (name) {\n\treturn 'hello ' + name;\n}\n\n\n')"
+          ]
+        },
+        {
+          "description": "Change the \"getName\" function to use an `=>` function without using the keyword `return`",
+          "tests": [
+            "1/03/02"
+          ],
+          "actions": [
+            "insert('\n// use => no return statement\nconst getName = function getName() {\n\treturn 'Joe';\n}\n\n\n')"
+          ]
+        },
+        {
+          "description": "Fix the broken clock by using arrow functions.",
+          "tests": [
+            "1/03/03"
+          ],
+          "actions": [
+            "insert('\n// fix the clock\n// http://codepen.io/redacademy/pen/mPjXVW\n\n')"
+          ]
+        }
+      ],
+      "onPageComplete": "Great! Now you should have a good idea how to use `=>` functions, and how arrow functions solve the confusion over `this`"
+    },
+    {
+      "title": "Template Literal",
+      "description": "Template literals are string literals allowing embedded expressions. You can use multi-line strings and string interpolation features with them.\n\nTemplate strings are wrapped in the backtick symbol: '\\`'. Variables can be put inside of template strings using `${ name }` syntax.\n\n```js\nlet single = `string text`;\nlet multi = `string text line 1\n string text line 2`;\n\nlet template = `string text ${expression} string text`;\n```",
+      "tasks": [
+        {
+          "description": "`log` a template literal using `template`. What does it look like?",
+          "actions": [
+            "open('template-literal.js')",
+            "set('// change the output to a template literal\n\nfunction template() {\n  console.log('I know what a backtick is');\n}\ntemplate();\n\n\n')"
+          ],
+          "tests": [
+            "1/04/01"
+          ]
+        },
+        {
+          "description": "rewrite `multiline` to use template literals",
+          "tests": [
+            "1/04/02"
+          ],
+          "actions": [
+            "insert('\nfunction multiline() {\n\tconsole.log('1.\\n2.\\n3.');\n}\nmultiline();\n// 1.\n// 2.\n// 3.\n\n\n')"
+          ]
+        },
+        {
+          "description": "rewrite `expressions` to use template literals",
+          "tests": [
+            "1/04/03"
+          ],
+          "hints": [
+            "Use `${expressions}`"
+          ],
+          "actions": [
+            "insert('\nfunction expression(name) {\n  console.log(\n    'Hello ' + name +\n    ', your bill is ' +\n    (2.25 * 1.15).toFixed(2) +\n    '.'\n  );\n}\nexpression('Joe');\n\n')"
+          ]
+        }
+      ],
+      "onPageComplete": "Great! Now you should have a good idea how to use template literals in your code"
+    },
+    {
+      "title": "Object Literal",
+      "description": "A shorthand for writing objects.\n\n```js\nconst foo = 'something';\nconst bar = 'else';\n\n// using object literal shorthand\nconst fooObj = {\n  foo, bar\n};\n// { foo: 'something', bar: 'else'}\n```",
+      "tasks": [
+        {
+          "description": "Rewrite the object in an easier way using object literals",
+          "actions": [
+            "open('object-literal.js')",
+            "set('// rewrite in a simpler way\nfunction getPersonObj(name, city) {\n  return {\n    name: name,\n    city: city\n  };\n}\n')"
+          ],
+          "tests": [
+            "1/05/01"
+          ]
         }
       ]
     }

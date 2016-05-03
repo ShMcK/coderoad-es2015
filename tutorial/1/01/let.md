@@ -1,4 +1,4 @@
-### Let
+## Let
 
 `let` allows you to declare variables that are limited in scope to the block, statement, or expression on which it is used.
 

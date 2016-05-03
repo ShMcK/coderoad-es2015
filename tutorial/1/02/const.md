@@ -1,4 +1,4 @@
-### Const
+## Const
 
 `const` is block-scoped, much like `let` statement.
 

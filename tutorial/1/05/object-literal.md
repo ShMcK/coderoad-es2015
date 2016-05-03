@@ -1,4 +1,4 @@
-### Object Literal
+## Object Literal
 
 A shorthand for writing objects.
 
@@ -15,7 +15,7 @@ const fooObj = {
 
 + Rewrite the object in an easier way using object literals
 @action(open('object-literal.js'))
-@test('2/01/01')
+@test('1/05/01')
 @action(set(
 ```
 // rewrite in a simpler way

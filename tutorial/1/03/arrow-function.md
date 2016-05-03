@@ -1,4 +1,4 @@
-### Arrow Functions
+## Arrow Functions
 
 An arrow function (`=>`) expression has a shorter syntax compared to function expressions and lexically binds the `this` value.
 

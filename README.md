@@ -19,10 +19,6 @@ CodeRoad is an open-sourced interactive tutorial platform for the Atom Editor. L
 
 ## Outline
 
-### Features
-
-New features in ES2015.
-
 ##### Let
 
 `let` allows you to declare variables that are limited in scope to the block, statement, or expression on which it is used.
@@ -76,4 +72,19 @@ let multi = `string text line 1
  string text line 2`;
 
 let template = `string text ${expression} string text`;
+```
+
+##### Object Literal
+
+A shorthand for writing objects.
+
+```js
+const foo = 'something';
+const bar = 'else';
+
+// using object literal shorthand
+const fooObj = {
+  foo, bar
+};
+// { foo: 'something', bar: 'else'}
 ```
