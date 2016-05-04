@@ -11,7 +11,7 @@ let blockScoped = true;
 
 
 + Run the `varTest` function and look in the console.
-@test('1/01/01')
+@test('01/01')
 @hint('Click "SAVE". ⌘ + S on Mac, ctrl + S on Windows')
 @action(open('let.js'))
 @action(set(
@@ -32,7 +32,7 @@ varTest();
 ))
 
 + Change `var` to `let` and run the `letTest` function. Don't forget to look in the console.
-@test('1/01/02')
+@test('01/02')
 @action(insert(
 ```
 
@@ -52,7 +52,7 @@ letTest();
 ))
 
 + fix the broken loop to log numbers 1 to 5
-@test('1/01/03')
+@test('01/03')
 @action(insert(
 ```
 

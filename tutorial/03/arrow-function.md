@@ -16,7 +16,7 @@ const getOne = () => 1;
 
 
 + Change the "greet" function to use an `=>` function
-@test('1/03/01')
+@test('03/01')
 @action(open('arrow-function.js'))
 @action(set(
 ```
@@ -30,7 +30,7 @@ const greet = function (name) {
 ))
 
 + Change the "getName" function to use an `=>` function without using the keyword `return`
-@test('1/03/02')
+@test('03/02')
 @action(insert(
 ```
 
@@ -44,7 +44,7 @@ const getName = function getName() {
 ))
 
 + Fix the broken clock by using arrow functions.
-@test('1/03/03')
+@test('03/03')
 @action(insert(
 ```
 

@@ -14,7 +14,7 @@ let template = `string text ${expression} string text`;
 
 + `log` a template literal using `template`. What does it look like?
 @action(open('template-literal.js'))
-@test('1/04/01')
+@test('04/01')
 @action(set(
 ```
 // change the output to a template literal
@@ -29,7 +29,7 @@ template();
 ))
 
 + rewrite `multiline` to use template literals
-@test('1/04/02')
+@test('04/02')
 @action(insert(
 ```
 
@@ -46,7 +46,7 @@ multiline();
 ))
 
 + rewrite `expressions` to use template literals
-@test('1/04/03')
+@test('04/03')
 @hint('Use `${expressions}`')
 @action(insert(
 ```

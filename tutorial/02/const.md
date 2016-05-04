@@ -13,7 +13,7 @@ console.log(name); // Shawn
 *Note: Atom uses an older version of Chrome that does not fully implement const yet. Const will work in Atom after a few months.*
 
 + Declare "person" as a `const`
-@test('1/02/01')
+@test('02/01')
 @action(open('const.js'))
 @action(set(
 ```
@@ -33,7 +33,7 @@ password = '1234';
 ))
 
 + Declare "person" as a constant. Check the log to see what will happen.
-@test('1/02/02')
+@test('02/02')
 @action(insert(
 ```
 
@@ -59,7 +59,7 @@ console.log(person);
 ))
 
 + Declare "people" as a constant. Check the log again.
-@test('1/02/03')
+@test('02/03')
 @action(insert(
 ```
 
