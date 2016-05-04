@@ -11,7 +11,7 @@
         {
           "description": "Run the `varTest` function and look in the console.",
           "tests": [
-            "1/01/01"
+            "01/01"
           ],
           "hints": [
             "Click \"SAVE\". ⌘ + S on Mac, ctrl + S on Windows"
@@ -24,7 +24,7 @@
         {
           "description": "Change `var` to `let` and run the `letTest` function. Don't forget to look in the console.",
           "tests": [
-            "1/01/02"
+            "01/02"
           ],
           "actions": [
             "insert('\n// use `let` and call `letTest()`\nfunction letTest() {\n\tvar x = 3;\n\tif (true) {\n\t\tvar x = 4;\n\t\tconsole.log(x);\n\t}\n\tconsole.log(x);\n}\nletTest();\n\n\n')"
@@ -33,7 +33,7 @@
         {
           "description": "fix the broken loop to log numbers 1 to 5",
           "tests": [
-            "1/01/03"
+            "01/03"
           ],
           "actions": [
             "insert('\n// log numbers from 1 to 5\nfor (var i = 1; i <= 5 ; i++ ) {\n  setTimeout(function() {\n    console.log(i);\n  })\n}\n// 6 6 6 6 6\n\n')"
@@ -49,7 +49,7 @@
         {
           "description": "Declare \"person\" as a `const`",
           "tests": [
-            "1/02/01"
+            "02/01"
           ],
           "actions": [
             "open('const.js')",
@@ -59,7 +59,7 @@
         {
           "description": "Declare \"person\" as a constant. Check the log to see what will happen.",
           "tests": [
-            "1/02/02"
+            "02/02"
           ],
           "actions": [
             "insert('\n// declare person as a const\n// cannot be redeclared\nvar person = {\n  name: 'Shawn',\n  city: 'Vancouver'\n};\n\nperson = {\n  name: 'Unknown',\n  city: 'Las Vegas'\n};\n\nperson.favoriteColor = 'blue';\n\n// what will the output be?\nconsole.log(person);\n\n\n')"
@@ -68,7 +68,7 @@
         {
           "description": "Declare \"people\" as a constant. Check the log again.",
           "tests": [
-            "1/02/03"
+            "02/03"
           ],
           "actions": [
             "insert('\n// declare people as a const\n\nvar people = ['Mandi', 'Mack', 'Ben'];\n\npeople = [];\n\npeople.push('Shawn');\n\n// what will the output be?\nconsole.log(people);\n\n')"
@@ -83,7 +83,7 @@
         {
           "description": "Change the \"greet\" function to use an `=>` function",
           "tests": [
-            "1/03/01"
+            "03/01"
           ],
           "actions": [
             "open('arrow-function.js')",
@@ -93,7 +93,7 @@
         {
           "description": "Change the \"getName\" function to use an `=>` function without using the keyword `return`",
           "tests": [
-            "1/03/02"
+            "03/02"
           ],
           "actions": [
             "insert('\n// use => no return statement\nconst getName = function getName() {\n\treturn 'Joe';\n}\n\n\n')"
@@ -102,7 +102,7 @@
         {
           "description": "Fix the broken clock by using arrow functions.",
           "tests": [
-            "1/03/03"
+            "03/03"
           ],
           "actions": [
             "insert('\n// fix the clock\n// http://codepen.io/redacademy/pen/mPjXVW\n\n')"
@@ -122,13 +122,13 @@
             "set('// change the output to a template literal\n\nfunction template() {\n  console.log('I know what a backtick is');\n}\ntemplate();\n\n\n')"
           ],
           "tests": [
-            "1/04/01"
+            "04/01"
           ]
         },
         {
           "description": "rewrite `multiline` to use template literals",
           "tests": [
-            "1/04/02"
+            "04/02"
           ],
           "actions": [
             "insert('\nfunction multiline() {\n\tconsole.log('1.\\n2.\\n3.');\n}\nmultiline();\n// 1.\n// 2.\n// 3.\n\n\n')"
@@ -137,7 +137,7 @@
         {
           "description": "rewrite `expressions` to use template literals",
           "tests": [
-            "1/04/03"
+            "04/03"
           ],
           "hints": [
             "Use `${expressions}`"
@@ -160,7 +160,7 @@
             "set('// rewrite in a simpler way\nfunction getPersonObj(name, city) {\n  return {\n    name: name,\n    city: city\n  };\n}\n')"
           ],
           "tests": [
-            "1/05/01"
+            "05/01"
           ]
         }
       ]
