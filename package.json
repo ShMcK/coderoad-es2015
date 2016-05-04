@@ -1,13 +1,14 @@
 {
   "name": "coderoad-es2015",
   "version": "0.1.0",
-  "description": "Coderoad tutorial",
-  "author": "Name <email> (site)",
+  "description": "Coderoad tutorial for learning ES2015",
+  "author": "Shawn McKay <shawn.j.mckay@gmail.com> (shmck.com)",
   "contributors": [],
   "main": "coderoad.json",
   "files": [
     "coderoad.json",
-    "tutorial"
+    "tutorial",
+    "es2015"
   ],
   "keywords": [
     "coderoad",
